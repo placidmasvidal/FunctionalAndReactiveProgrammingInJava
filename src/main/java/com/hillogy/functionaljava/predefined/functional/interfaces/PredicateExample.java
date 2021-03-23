@@ -11,17 +11,17 @@ public class PredicateExample {
 
         List<String> list = new ArrayList<>();
 
-        list.add("Basics");
+        list.add("Hillogy");
         list.add("");
-        list.add("Strong");
+        list.add("Software");
         list.add("");
-        list.add("BasicsStrong");
+        list.add("HillogySoftware");
 
         Predicate<String> predicate = s -> !s.isEmpty();
 
         List<String> newList = filterList(list, predicate);
 
-        Predicate<String> filter = s -> s.contains("Basics");
+        Predicate<String> filter = s -> s.contains("Hillogy");
 
         List<String> filteredList = filterList(list, filter);
 
@@ -34,7 +34,6 @@ public class PredicateExample {
         System.out.println(newList);
         System.out.println(filteredList);
         System.out.println(evens);
-
 
     }
 
