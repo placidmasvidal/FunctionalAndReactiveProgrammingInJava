@@ -1,6 +1,7 @@
 package com.hillogy.functionaljava.methodandconstructorreference;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -10,7 +11,7 @@ public class MethodReference {
 
     public static void main(String[] args) {
 
-        List<Integer> list = List.of(34,67,8,23,67,89,90);
+        List<Integer> list = Arrays.asList(34,67,8,23,67,89,90);
 
         // Object Method reference example  object :: instanceMethod
         Consumer<Integer> consumer = System.out :: println ;
@@ -25,7 +26,7 @@ public class MethodReference {
         System.out.println(randomNumber.get());
 
         // Class Instance Method reference example  Class :: instanceMethod
-        List<String> listOfString = List.of("Kit", "Kat", "Shake");
+        List<String> listOfString = Arrays.asList("Kit", "Kat", "Shake");
 
         Function<String, Integer> function = String :: length;
 

@@ -1,6 +1,7 @@
 package com.hillogy.functionaljava.predefined.functional.interfaces;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.UnaryOperator;
 
@@ -8,7 +9,7 @@ public class UnaryOperatorExample {
 
     public static void main(String[] args){
 
-        List<Integer> list = List.of(10, 20, 30, 40, 50);
+        List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
 
         UnaryOperator<Integer> operator = i -> i * 100;
 

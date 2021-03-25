@@ -1,6 +1,7 @@
 package com.hillogy.functionaljava.predefined.functional.interfaces;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
@@ -8,7 +9,7 @@ public class FunctionExample {
 
     public static void main(String[] args){
 
-        List<String> list = List.of("Kit", "Kat", "Shake");
+        List<String> list = Arrays.asList("Kit", "Kat", "Shake");
 
         Function<String, Integer> function = e -> e.length();
 
