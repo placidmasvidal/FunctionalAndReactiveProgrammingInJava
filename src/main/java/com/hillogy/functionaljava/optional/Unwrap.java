@@ -38,14 +38,16 @@ public class Unwrap {
         Integer orElseGet = emptyOptional.orElseGet(() -> 0 );
         System.out.println(orElseGet);
 
+
+
+
+
+
         //orElseThrow
 
-        Integer orElseThrow = emptyOptional.orElseThrow(() -> new IllegalArgumentException());
+            //Integer orElseThrow = emptyOptional.orElseThrow(() -> new IllegalArgumentException());
 
         //orElseThrow() = get()
-
-
-
 
     }
 

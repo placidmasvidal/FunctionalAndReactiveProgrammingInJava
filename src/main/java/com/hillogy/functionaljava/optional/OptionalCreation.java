@@ -18,9 +18,6 @@ public class OptionalCreation {
         Optional<String> nullable = Optional.ofNullable( val);
         Optional<String> emptyOptional = Optional.ofNullable( null);
 
-
-
-
     }
 
 }

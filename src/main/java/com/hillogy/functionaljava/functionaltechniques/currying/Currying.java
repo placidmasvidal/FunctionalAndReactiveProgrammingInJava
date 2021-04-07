@@ -6,19 +6,25 @@ public class Currying {
 
     public static void main(String[] args){
 
-        Function<Integer, Function<Integer, Integer>> fun1 =
-                u -> v -> u + v;
+        /* Function<Integer, Function<Integer, Integer>> fun1 = u -> {
+            return v -> u + v;
+        };  */
 
-        Function<Integer, Integer> fun2 = fun1.apply(1);
+/*        Function<Integer, Function<Integer, Integer>> fun1 =
+                u -> v -> u + v;    */
 
-        Integer sum1 = fun2.apply(2);
+//        Function<Integer, Integer> fun2 = fun1.apply(1);
 
-//        System.out.println(sum);
+        Function<Integer, Function<Integer, Function<Integer, Integer>>> fun1 =
+                u -> v -> w -> u + v + w;
 
+        Function<Integer, Function<Integer, Integer>> fun2 = fun1.apply(1);
 
-//        System.out.println(fun1.apply(1).apply(2));
+        Function<Integer, Integer> fun3 = fun2.apply(2);
 
-        Integer sum2 = fun2.apply(3);
+        Integer sum = fun3.apply(3);
+
+        System.out.println(sum);
 
     }
 
