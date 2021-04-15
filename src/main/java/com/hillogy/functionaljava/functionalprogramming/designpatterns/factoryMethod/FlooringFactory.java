@@ -6,9 +6,9 @@ public class FlooringFactory {
 	
 	public static Flooring getFlooring(int minTemprature, int maxTemprature) {
 		
-		Supplier<Flooring> flooring;
+		Supplier<Flooring> flooring = null;
 
-		if(minTemprature <= 5 && maxTemprature <=20) {
+/*		if(minTemprature <= 5 && maxTemprature <=20) {
 			flooring = () -> new WoodenFlooring();
 		}else if(minTemprature <=5 && maxTemprature >=45) {
 			flooring = () -> new CorkFlooring();
@@ -16,7 +16,12 @@ public class FlooringFactory {
 			flooring = () -> new ConcreteFlooring();
 		}
 		
-		return flooring.get();
+		return flooring.get();	*/
+
+		return (minTemprature <= 5 && maxTemprature <=20) ? new WoodenFlooring() :
+				(minTemprature <=5 && maxTemprature >=45) ? new CorkFlooring() :
+						new ConcreteFlooring();
+
 	}
 	
 }
